@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabor do Brasil - Publicações Gastronômicas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="top-area" role="banner">
+      <div id="profile-column" class="column" aria-labelledby="company-name">
+        <div class="company-info">
+          <img
+            src="assets/image.png"
+            alt="Logo Sabor do Brasil"
+            width="80"
+            height="80"
+          />
+          <h2 id="company-name">Sabor do Brasil</h2>
+        </div>
+      </div>
+      <main id="main-column" class="column" role="main">
+        <div id="main-header">
+          <h1>Publicações</h1>
+          <div class="controls">
+            <label for="search" class="visually-hidden"
+              >Pesquisar publicações</label
+            >
+            <input
+              id="search"
+              type="search"
+              placeholder="Pesquisar pratos, locais ou cidade..."
+              aria-label="Pesquisar publicações"
+            />
+          </div>
+        </div>
+
+        <section id="publications-list" aria-live="polite">
+          <!-- Publication cards will be injected here by app.js -->
+        </section>
+
+        <div id="empty-state" class="empty" hidden>
+          <p>Nenhuma publicação encontrada. Tente outra busca.</p>
+        </div>
+      </main>
+
+      <aside id="spa-control-column" class="column" role="complementary">
+        <button id="login-button" aria-haspopup="dialog">Entrar</button>
+        <div
+          id="login-modal"
+          class="modal"
+          aria-hidden="true"
+          role="dialog"
+          aria-labelledby="login-title"
+        >
+          <div class="modal-content">
+            <h3 id="login-title">Faça login para interagir</h3>
+            <p>Login — ao entrar, você poderá curtir e comentar.</p>
+
+            <form id="login-form" novalidate>
+              <label class="visually-hidden" for="login-username"
+                >Nome de usuário</label
+              >
+              <input
+                id="login-username"
+                name="username"
+                type="text"
+                placeholder="Digite seu nome"
+                autocomplete="username"
+              />
+
+              <label class="visually-hidden" for="login-password">Senha</label>
+              <input
+                id="login-password"
+                name="password"
+                type="password"
+                placeholder="Digite sua senha"
+                autocomplete="current-password"
+              />
+
+              <p
+                id="login-error"
+                class="error-message"
+                hidden
+                aria-live="polite"
+              >
+                Usuário ou senha incorreto
+              </p>
+
+              <div class="modal-actions">
+                <button type="button" id="cancel-login" class="close-button">
+                  Cancelar
+                </button>
+                <button type="button" id="do-login" class="primary">
+                  Entrar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <footer id="footer-area" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-about">
+          <h4>Sabor do Brasil</h4>
+          <p>
+            Publicações gastronômicas com receitas, lugares e histórias do
+            Brasil.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links rápidos">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Publicações</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h5>Contato</h5>
+          <p>
+            <a href="mailto:contato@sabordobrasil.example"
+              >contato@sabordobrasil.example</a
+            >
+          </p>
+          <p>Telefone: (00) 0000-0000</p>
+        </div>
+        <div>
+          <div class="footer-social">
+            <h5>Siga-nos</h5>
+            <div class="social-icons">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img
+                  src="https://i.ibb.co/ycCfqPt8/instagram-logotipo-971166-164438-removebg-preview.png"
+                  alt="Instagram"
+                />
+              </a>
+              <a
+                href="https://whatsapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <img
+                  src="https://i.ibb.co/SXD4j3xK/7e68352dbb78715ab8d44d647164cff8-removebg-preview.png"
+                  alt="Twitter"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <small>© 2024 Sabor do Brasil — Todos os direitos reservados</small>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
